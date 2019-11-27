@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Poetry Room</title>
+
+	<style type="text/css">
+		@font-face { font-family: 'RIDIBatang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+		
+
+		.text1{position: center; 
+				font-family: 'RIDIBatang';font-weight: normal; font-style: normal;text-align: center;
+				margin-top: 70px; margin-bottom: 0}
+		h1 {color: black; font-size: 40pt;}
+		h3 {color: gray;}
+
+		body, html {margin: 0px; padding: 0;}
+		body, html {height: 100%, margin: auto; overflow: hidden;}
+
+		.bg{background-image: url("21.gif"); height: 110vh; background-position: center; background-repeat: no-repeat; background-size: cover;}
+
+	</style>
+
+</head>
+
+<body class="bg">
+
+	<audio id="fpt"><source src="fpt.mp3" type="audio/ogg"></audio>
+
+
+	<div id="main">
+		<div class="text1">
+			<h1>시; 방</h1>
+			<h3>Poetry Room</h3>
+		</div>
+		
+
+		<div id="firstDoor" style="position: relative;">
+			<img src="door.png" id="door1" style="position: relative; left: 20%; top: 10vh; opacity: 1; cursor: pointer; z-index: 15; height: 350px">
+			<img src="door3.png" id="door3" style="position: relative; left: 10%; top: 10vh; opacity: 0; z-index: 9;  height: 350px">
+		</div>
+
+
+		<div id="SecondDoor" style="position: relative;">
+			<img src="door4.png" id="door4" style="position: relative; left: 45%; top: -30vh; opacity: 1; cursor: pointer; z-index: 15; height: 350px">
+			<img src="door5.png" id="door5" style="position: relative; left: 33%; top: -30vh; opacity: 0; z-index: 9;  height: 350px">
+		</div>
+
+		<div id="firstPt" style="position: relative; ">
+			<img src="fpt.png" id="pt" style="width: 500px; height: auto; position: relative; top: -500px;left: 700px; opacity: 0;">
+		</div>
+
+
+	
+
+		<div id="imgg" style="position: relative; top: 300px; left: 100px; z-index: 5; width: 10px; height: 10px;">
+			<img src="18.gif" id="imgg1" style="position: relative; width: 200px;  top: 0px; left: 50px; opacity: 0;">
+			<img src="17.gif" id="imgg2" style="position: relative; top: 0px; left: 0px; opacity: 0;">
+			<img src="16.gif" id="imgg3" style="width: 350px; position: relative; top: 0px; left: 300px; opacity: 0;">
+		</div>
+
+
+	</div>
+
+	<script type="text/javascript">
+		
+		var state = "off";
+     	
+
+		
+
+
+
+		
+
+		door1.onclick = function function_name(argument) {
+			// body...
+			if(state == "off"){
+           		door1.style.opacity = "1";
+				door3.style.opacity = "0";
+				pt.style.opacity = "0";
+           		imgg1.style.opacity = "0";
+           		imgg2.style.opacity = "0";
+				imgg3.style.opacity = "0";
+				fpt.pause();
+           		state = "on";}
+        	else{
+        		door1.style.opacity = "0";
+        		door3.style.opacity = "1";
+				pt.style.opacity = "1";
+           		imgg1.style.opacity = "1";
+           		imgg2.style.opacity = "1";
+				imgg3.style.opacity = "1";
+				fpt.play();
+        		state = "off";};
+		}
+
+
+		door4.onclick = function function_name(argument) {
+			// body...
+			if(state == "off"){
+           		door4.style.opacity = "1";
+				door5.style.opacity = "0";
+				pt.style.opacity = "0";
+           		imgg1.style.opacity = "0";
+           		imgg2.style.opacity = "0";
+				imgg3.style.opacity = "0";
+				fpt.pause();
+           		state = "on";}
+        	else{
+        		door4.style.opacity = "0";
+        		door5.style.opacity = "1";
+				pt.style.opacity = "1";
+           		imgg1.style.opacity = "1";
+           		imgg2.style.opacity = "1";
+				imgg3.style.opacity = "1";
+				fpt.play();
+        		state = "off";};
+		}
+		
+		
+
+	</script>
+
+
+</body>
+</html>
